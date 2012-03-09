@@ -4,7 +4,7 @@ class WordsController < ApplicationController
   def index
     @word = Word.new
 
-    @words = Word.all
+    @words = Word.paginate(:page => params[:page]).order('word')
 
     respond_to do |format|
       format.html # index.html.erb

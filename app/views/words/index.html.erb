@@ -1,10 +1,14 @@
-<p id="notice"><%= notice %></p>
-
 <h1>Neues Wort</h1>
 
 <%= render 'form' %>
 
+<br />
+
 <h1>Wortliste</h1>
+
+<div class="digg_pagination">
+    <%= will_paginate @words %>
+</div>
 
 <table>
   <tr>
@@ -24,5 +28,14 @@
   </tr>
 <% end %>
 </table>
+
+<div class="digg_pagination">
+    <%= will_paginate @words %>
+</div>
+<div class="digg_pagination">
+    <div class="page_info">
+      <%= page_entries_info @posts %>
+    </div>
+</div>
 
 <br />
