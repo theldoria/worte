@@ -2,6 +2,8 @@ class WordsController < ApplicationController
   # GET /words
   # GET /words.json
   def index
+    @word = Word.new
+
     @words = Word.all
 
     respond_to do |format|
@@ -44,7 +46,7 @@ class WordsController < ApplicationController
 
     respond_to do |format|
       if @word.save
-        format.html { redirect_to @word, notice: 'Word was successfully created.' }
+        format.html { redirect_to Word, notice: 'Wort erfolgreich angelegt.' }
         format.json { render json: @word, status: :created, location: @word }
       else
         format.html { render action: "new" }
@@ -60,7 +62,7 @@ class WordsController < ApplicationController
 
     respond_to do |format|
       if @word.update_attributes(params[:word])
-        format.html { redirect_to @word, notice: 'Word was successfully updated.' }
+        format.html { redirect_to @word, notice: 'Wort wurde erfolgreich geaendert.' }
         format.json { head :no_content }
       else
         format.html { render action: "edit" }
@@ -76,7 +78,7 @@ class WordsController < ApplicationController
     @word.destroy
 
     respond_to do |format|
-      format.html { redirect_to words_url }
+      format.html { redirect_to words_url, notice: 'Wort wurde erfolgreich geloescht.' }
       format.json { head :no_content }
     end
   end
