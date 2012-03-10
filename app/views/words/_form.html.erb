@@ -16,8 +16,24 @@
     <%= f.text_field :word %>
   </div>
   <div class="field">
-    <%= f.label :sprache %><br />
-    <%= f.text_field :language %>
+    <%= f.label :aussprache %><br />
+    <%= f.text_field :spelling %>
+  </div>
+  <div class="field">
+    <%= f.label :kommentar %><br />
+    <%= f.text_area :comment %>
+  </div>
+  <div class="field">
+    <%= f.label :monat %><br />
+    <%= f.number_field :month %>
+  </div>
+  <div class="field">
+    <%= f.label :polish %><br />
+    <%= f.check_box :polish %>
+  </div>
+  <div class="field">
+    <%= f.label :german %><br />
+    <%= f.check_box :german %>
   </div>
   <div class="actions">
     <%= f.submit %>

@@ -1,3 +1,5 @@
+require 'time'
+
 class WordsController < ApplicationController
   # GET /words
   # GET /words.json
@@ -62,7 +64,7 @@ class WordsController < ApplicationController
 
     respond_to do |format|
       if @word.update_attributes(params[:word])
-        format.html { redirect_to @word, notice: 'Wort wurde erfolgreich geaendert.' }
+        format.html { redirect_to Word, notice: 'Wort wurde erfolgreich geaendert.' }
         format.json { head :no_content }
       else
         format.html { render action: "edit" }

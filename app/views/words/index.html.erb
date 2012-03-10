@@ -16,7 +16,11 @@
 <table>
   <tr>
     <th>Wort</th>
-    <th>Sprache</th>
+    <th>Aussprache</th>
+    <th>Kommentar</th>
+    <th>Monat</th>
+    <th>Polnisch</th>
+    <th>Deutsch</th>
     <th></th>
     <th></th>
     <th></th>
@@ -25,7 +29,11 @@
 <% @words.each do |word| %>
   <tr>
     <td><%= word.word %></td>
-    <td><%= word.language %></td>
+    <td><%= word.spelling %></td>
+    <td><%= word.comment %></td>
+    <td><%= word.month %></td>
+    <td><%= word.polish %></td>
+    <td><%= word.german %></td>
     <td><%= link_to 'Aendern', edit_word_path(word) %></td>
     <td><%= link_to 'Loeschen', word, confirm: 'Are you sure?', method: :delete %></td>
   </tr>
