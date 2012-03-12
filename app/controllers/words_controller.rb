@@ -5,7 +5,11 @@ class WordsController < ApplicationController
   # GET /words.json
   def index
     @word = Word.new
-
+    @filter = Word.new(params[:word])
+p "-" * 80
+p params
+p "-" * 80
+#    @words = @filter.get_scope.paginate(:page => params[:page]).order('word')
     @words = Word.paginate(:page => params[:page]).order('word')
 
     respond_to do |format|

@@ -1,0 +1,21 @@
+---
+rails.png: rails.png
+application.js: application.js
+application.css: application.css
+blueprint/plugins/buttons/icons/cross.png: blueprint/plugins/buttons/icons/cross.png
+blueprint/plugins/buttons/icons/key.png: blueprint/plugins/buttons/icons/key.png
+blueprint/plugins/buttons/icons/tick.png: blueprint/plugins/buttons/icons/tick.png
+blueprint/plugins/buttons/readme.txt: blueprint/plugins/buttons/readme.txt
+blueprint/plugins/fancy-type/readme.txt: blueprint/plugins/fancy-type/readme.txt
+blueprint/plugins/link-icons/icons/doc.png: blueprint/plugins/link-icons/icons/doc.png
+blueprint/plugins/link-icons/icons/email.png: blueprint/plugins/link-icons/icons/email.png
+blueprint/plugins/link-icons/icons/external.png: blueprint/plugins/link-icons/icons/external.png
+blueprint/plugins/link-icons/icons/feed.png: blueprint/plugins/link-icons/icons/feed.png
+blueprint/plugins/link-icons/icons/im.png: blueprint/plugins/link-icons/icons/im.png
+blueprint/plugins/link-icons/icons/lock.png: blueprint/plugins/link-icons/icons/lock.png
+blueprint/plugins/link-icons/icons/pdf.png: blueprint/plugins/link-icons/icons/pdf.png
+blueprint/plugins/link-icons/icons/visited.png: blueprint/plugins/link-icons/icons/visited.png
+blueprint/plugins/link-icons/icons/xls.png: blueprint/plugins/link-icons/icons/xls.png
+blueprint/plugins/link-icons/readme.txt: blueprint/plugins/link-icons/readme.txt
+blueprint/plugins/rtl/readme.txt: blueprint/plugins/rtl/readme.txt
+blueprint/src/grid.png: blueprint/src/grid.png
