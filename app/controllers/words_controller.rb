@@ -4,13 +4,16 @@ class WordsController < ApplicationController
   # GET /words
   # GET /words.json
   def index
-    @word = Word.new
-    @filter = Word.new(params[:word])
-p "-" * 80
-p params
-p "-" * 80
-#    @words = @filter.get_scope.paginate(:page => params[:page]).order('word')
-    @words = Word.paginate(:page => params[:page]).order('word')
+     @word = Word.new
+
+     session[:word] = params[:word] if params[:word]
+     @filter = Word.new(session[:word])
+
+     if session[:word] and session[:word][:german]
+        @words = Word.paginate(:page => params[:page]).order('word').where("german = ?", session[:word][:german] != "0")
+     else
+        @words = Word.paginate(:page => params[:page]).order('word')
+     end
 
     respond_to do |format|
       format.html # index.html.erb
