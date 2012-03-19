@@ -5,19 +5,17 @@ class WordsController < ApplicationController
   # GET /words.json
   def index
      @word = Word.new
-
-     session[:word] = params[:word] if params[:word]
-     @filter = Word.new(session[:word])
-
-     if session[:word] and session[:word][:german]
-        @words = Word.paginate(:page => params[:page]).order('word').where("german = ?", session[:word][:german] != "0")
-     else
-        @words = Word.paginate(:page => params[:page]).order('word')
-     end
+     
+     tri_state_from_session(:german)
+     tri_state_from_session(:polish)
+     x = params[:german] ? Word.where("german = ?", params[:german] == "true") : Word
+     y = params[:polish] ? x.where("polish = ?", params[:polish] == "true") : x
+     @words = y.order('word').paginate(:page => params[:page])
 
     respond_to do |format|
-      format.html # index.html.erb
-      format.json { render json: @words }
+       format.html # index.html.erb
+       format.json { render json: @words }
+       format.js # renders index.js.erb
     end
   end
 
@@ -91,4 +89,12 @@ class WordsController < ApplicationController
       format.json { head :no_content }
     end
   end
+
+  private
+
+   def tri_state_from_session param
+     params[param] = session[param] if session[param] and not params[param]
+     params[param] = nil if params[param] == 'none'
+     session[param] = params[param]
+   end
 end

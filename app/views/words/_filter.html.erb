@@ -1,13 +1,4 @@
-<%= form_for(@filter, :url => {:action => "index"}, :html => {:method => :get}) do |f| %>
-  <div class="field">
-    <%= f.label :polish %><br />
-    <%= f.check_box :polish %>
-  </div>
-  <div class="field">
-    <%= f.label :german %><br />
-    <%= f.check_box :german %>
-  </div>
-  <div class="actions">
-    <%= f.submit "Filter" %>
-  </div>
-<% end %>
+<%= link_to "German (toggle)",
+        words_path(:german => true),
+        :remote => true,
+        :id => 'toggle' %>

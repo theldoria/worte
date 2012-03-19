@@ -1,0 +1,11 @@
+<% clazz = tri_state_class(:polish) %>
+<% href = tri_state_href(:polish) %>
+$("#polish_toggle").attr("class", "<%= clazz %>");
+$("#polish_toggle").attr("href", "<%= href %>");
+
+<% clazz = tri_state_class(:german) %>
+<% href = tri_state_href(:german) %>
+$("#german_toggle").attr("class", "<%= clazz %>");
+$("#german_toggle").attr("href", "<%= href %>");
+
+$("#words").html('<%= escape_javascript(render @words) %>');
