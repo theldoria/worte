@@ -10,32 +10,55 @@
       </ul>
     </div>
   <% end %>
-
-  <div class="field">
-    <%= f.label :wort %><br />
+<table>
+  <tr>
+  <th>
+    <%= f.label :wort %>
+  </th>
+  <th>
     <%= f.text_field :word %>
-  </div>
-  <div class="field">
-    <%= f.label :aussprache %><br />
+  </th>
+  <th>
+    <%= f.label :aussprache %>
+  </th>
+  <th>
     <%= f.text_field :spelling %>
-  </div>
-  <div class="field">
-    <%= f.label :kommentar %><br />
+  </th>
+  </tr>
+  <tr>
+  <th>
+    <%= f.label :kommentar %>
+  </th>
+  <th>
     <%= f.text_field :comment %>
-  </div>
-  <div class="field">
-    <%= f.label :monat %><br />
+  </th>
+  <th>
+    <%= f.label :monat %>
+  </th>
+  <th>
     <%= f.number_field :month %>
-  </div>
-  <div class="field">
-    <%= f.label :polish %><br />
+  </th>
+  </tr>
+  <tr>
+  <th>
+    <%= f.label :polish %>
+  </th>
+  <th>
     <%= f.check_box :polish %>
-  </div>
-  <div class="field">
-    <%= f.label :german %><br />
+  </th>
+  <th>
+    <%= f.label :german %>
+  </th>
+  <th>
     <%= f.check_box :german %>
-  </div>
+  </tr>
+  </th>
+  <tr>
+  <th>
   <div class="actions">
     <%= f.submit %>
   </div>
+  </th>
+  </tr>
+</table>
 <% end %>
