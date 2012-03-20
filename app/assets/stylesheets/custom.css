@@ -144,7 +144,6 @@ div.field, div.actions {
   margin-bottom: 10px;
 }
 
-# user/index.html.erb
 
 ul.users {
   margin-top: 1em;
@@ -154,7 +153,6 @@ ul.users {
   list-style: none;
 }
 
-# Microposts
 
 h1.micropost {
   margin-bottom: 0.3em;
@@ -211,7 +209,6 @@ form.new_micropost textarea {
   margin-bottom: 0;
 }
 
-# Error messages
 
 .field_with_errors {
   margin-top: 10px;
